@@ -16,29 +16,41 @@
     </div>
 ```
 - css:
+```html
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/du_TabController.css"/>
+```
 - js:
+```html
     <script src="js/du_TabController.js"></script>
-- show1：
+```
+- show：
+```javascript
     var tab1 = new Tab('layOut-tab');
     tab1.init({});
-- show2：
+```
+- show：
+```javascript
     var tab2 = new Tab('layOut-tab2');
     tab2.init({
         event:'mouseover'
     });
--show3：
+```
+-show：
+```javascript
     var tab3 = new Tab('layOut-tab3');
     tab3.init({
         event:'mouseover',
         index:2,
         delay:300
     });
--show4：
+```
+-show：
+```javascript
     var tab4 = new Tab('layOut-tab4');
     tab4.init({
         event:'mouseover',
         delay:0
     });
     tab4.autoPlay(1000);
+```
