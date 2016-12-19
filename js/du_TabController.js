@@ -59,11 +59,11 @@ Tab.prototype.autoPlay = function(t){
 
 Tab.prototype.show = function(obj){
     //nav
-    this.aNav.removeClass('active');
-    this.aNav.eq($(obj).index()).addClass('active');
+    this.aNav.removeClass('du_tabActive');
+    this.aNav.eq($(obj).index()).addClass('du_tabActive');
     //con
-    this.aCon.removeClass('active');
-    this.aCon.eq($(obj).index()).addClass('active');
+    this.aCon.removeClass('du_tabActive');
+    this.aCon.eq($(obj).index()).addClass('du_tabActive');
     //改变当前的index下标
     this.index = $(obj).index();
 }

@@ -19,7 +19,7 @@
     font-size: 14px;
     background-image: -webkit-linear-gradient(top, rgb(254, 254, 254), rgb(237, 237, 237));
 }
-.du_tabNav li.active{
+.du_tabNav li.du_tabActive{
     position: relative;
     height: 30px;
     z-index: 1;
@@ -29,7 +29,7 @@
     display: inline-block;
     color: #252525;
 }
-.du_tabNav li.active a{
+.du_tabNav li.du_tabActive a{
     font-weight: bold;
 }
 .du_tabNav li a:hover{
@@ -43,6 +43,6 @@
 .du_tabCon li{
     display: none;
 }
-.du_tabCon li.active{
+.du_tabCon li.du_tabActive{
     display: block;
 }

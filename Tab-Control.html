@@ -9,57 +9,53 @@
 
 <body>
 
-<div id="layOut-tab" class="du_tab">
+<div id="layOut_tab" class="du_tab">
     <ul class="du_tabNav clearFix">
-        <li class="active"><a href="javascript:;">新闻</a></li>
+        <li class="du_tabActive"><a href="javascript:;">新闻</a></li>
         <li><a href="javascript:;">电影</a></li>
         <li><a href="javascript:;">图片</a></li>
     </ul>
     <ul class="du_tabCon">
-        <li class="active"><div>点击事件：新闻的内容</div></li>
+        <li class="du_tabActive"><div>点击事件：新闻的内容</div></li>
         <li><div>点击事件：电影的内容</div></li>
         <li><div>点击事件：图片的内容</div></li>
     </ul>
 </div>
 
-
-<div id="layOut-tab2" class="du_tab">
+<div id="layOut_tab2" class="du_tab">
     <ul class="du_tabNav clearFix">
-        <li class="active"><a href="javascript:;">新闻</a></li>
+        <li class="du_tabActive"><a href="javascript:;">新闻</a></li>
         <li><a href="javascript:;">电影</a></li>
         <li><a href="javascript:;">图片</a></li>
     </ul>
     <ul class="du_tabCon">
-        <li class="active"><div>滑动事件：新闻的内容</div></li>
+        <li class="du_tabActive"><div>滑动事件：新闻的内容</div></li>
         <li><div>滑动事件：电影的内容</div></li>
         <li><div>滑动事件：图片的内容</div></li>
     </ul>
 </div>
 
-
-
-<div id="layOut-tab3" class="du_tab">
+<div id="layOut_tab3" class="du_tab">
     <ul class="du_tabNav clearFix">
-        <li class="active"><a href="javascript:;">新闻</a></li>
+        <li class="du_tabActive"><a href="javascript:;">新闻</a></li>
         <li><a href="javascript:;">电影</a></li>
         <li><a href="javascript:;">图片</a></li>
     </ul>
     <ul class="du_tabCon">
-        <li class="active"><div>滑动事件（延迟）：新闻的内容</div></li>
+        <li class="du_tabActive"><div>滑动事件（延迟）：新闻的内容</div></li>
         <li><div>滑动事件（延迟）：电影的内容</div></li>
         <li><div>滑动事件（延迟）：图片的内容</div></li>
     </ul>
 </div>
 
-
-<div id="layOut-tab4" class="du_tab">
+<div id="layOut_tab4" class="du_tab">
     <ul class="du_tabNav clearFix">
-        <li class="active"><a href="javascript:;">新闻</a></li>
+        <li class="du_tabActive"><a href="javascript:;">新闻</a></li>
         <li><a href="javascript:;">电影</a></li>
         <li><a href="javascript:;">图片</a></li>
     </ul>
     <ul class="du_tabCon">
-        <li class="active"><div>自动播放：新闻的内容</div></li>
+        <li class="du_tabActive"><div>自动播放：新闻的内容</div></li>
         <li><div>自动播放：电影的内容</div></li>
         <li><div>自动播放：图片的内容</div></li>
     </ul>
@@ -70,28 +66,26 @@
 <script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/du_TabController.js"></script>
 <script>
-
-    var tab1 = new Tab('layOut-tab');
+    var tab1 = new Tab('layOut_tab');
     tab1.init({});
 
-    var tab2 = new Tab('layOut-tab2');
+    var tab2 = new Tab('layOut_tab2');
     tab2.init({
         event:'mouseover'
     });
 
-    var tab3 = new Tab('layOut-tab3');
+    var tab3 = new Tab('layOut_tab3');
     tab3.init({
         event:'mouseover',
         index:2,
         delay:300
     });
 
-    var tab4 = new Tab('layOut-tab4');
+    var tab4 = new Tab('layOut_tab4');
     tab4.init({
         event:'mouseover',
         delay:0
     });
     tab4.autoPlay(1000);
-
 </script>
 </html>

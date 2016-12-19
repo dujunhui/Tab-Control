@@ -1,53 +1,53 @@
 # du_TabController
 
-- view：
+- html
 ```html
-    <div id="layOut-tab" class="tab">
-        <ul class="tab-nav clearFix">
-            <li class="active"><a href="javascript:;">新闻</a></li>
+    <div id="layOut_tab" class="du_tab">
+        <ul class="du_tabNav clearFix">
+            <li class="du_tabActive"><a href="javascript:;">新闻</a></li>
             <li><a href="javascript:;">电影</a></li>
             <li><a href="javascript:;">图片</a></li>
         </ul>
-        <ul class="tab-con">
-            <li class="active"><div>点击事件：新闻的内容</div></li>
-            <li><div>电影的内容</div></li>
-            <li><div>图片的内容</div></li>
+        <ul class="du_tabCon">
+            <li class="du_tabActive"><div>点击事件：新闻的内容</div></li>
+            <li><div>点击事件：电影的内容</div></li>
+            <li><div>点击事件：图片的内容</div></li>
         </ul>
     </div>
 ```
-- css:
+- css
 ```html
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/du_TabController.css"/>
 ```
-- js:
+- js
 ```html
     <script src="js/du_TabController.js"></script>
 ```
-- show：
+- show
 ```javascript
     var tab1 = new Tab('layOut-tab');
     tab1.init({});
 ```
-- show：
+
 ```javascript
-    var tab2 = new Tab('layOut-tab2');
+    var tab2 = new Tab('layOut-tab');
     tab2.init({
         event:'mouseover'
     });
 ```
--show：
+
 ```javascript
-    var tab3 = new Tab('layOut-tab3');
+    var tab3 = new Tab('layOut-tab');
     tab3.init({
         event:'mouseover',
         index:2,
         delay:300
     });
 ```
--show：
+
 ```javascript
-    var tab4 = new Tab('layOut-tab4');
+    var tab4 = new Tab('layOut-tab');
     tab4.init({
         event:'mouseover',
         delay:0
