@@ -1,6 +1,7 @@
 # du_TabController
 
 - view：
+```html
     <div id="layOut-tab" class="tab">
         <ul class="tab-nav clearFix">
             <li class="active"><a href="javascript:;">新闻</a></li>
@@ -13,6 +14,7 @@
             <li><div>图片的内容</div></li>
         </ul>
     </div>
+```
 - css:
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/du_TabController.css"/>
