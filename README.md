@@ -1,7 +1,6 @@
 # du_TabController
 
 - view：
-
     <div id="layOut-tab" class="tab">
         <ul class="tab-nav clearFix">
             <li class="active"><a href="javascript:;">新闻</a></li>
@@ -14,25 +13,19 @@
             <li><div>图片的内容</div></li>
         </ul>
     </div>
-
 - css:
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/du_TabController.css"/>
-
-
 - js:
     <script src="js/du_TabController.js"></script>
-
 - show1：
     var tab1 = new Tab('layOut-tab');
     tab1.init({});
-
 - show2：
     var tab2 = new Tab('layOut-tab2');
     tab2.init({
         event:'mouseover'
     });
-
 -show3：
     var tab3 = new Tab('layOut-tab3');
     tab3.init({
@@ -40,7 +33,6 @@
         index:2,
         delay:300
     });
-
 -show4：
     var tab4 = new Tab('layOut-tab4');
     tab4.init({
