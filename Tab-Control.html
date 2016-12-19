@@ -3,82 +3,19 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/du_TabController.css"/>
 </head>
-<style>
-    ul{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-    a{
-        text-decoration: none;
-    }
-    .clearFix{
-        zoom: 1;
-    }
-    .clearFix:after{
-        content: '';
-        display: block;
-        clear: both;
-    }
-    .tab{
-        width: 310px;
-        height: 200px;
-        border-top: 2px solid #206F96;
-    }
-    .tab-nav{
-        height: 29px;
-        line-height: 29px;
-        border-left: 1px solid #CFCFCF;
-        border-bottom: 1px solid #CFCFCF;
-        background: #F7F7F7;
-    }
-    .tab-nav li{
-        float: left;
-        width: 102px;
-        height: 29px;
-        border-right: 1px solid #CFCFCF;
-        text-align: center;
-        font-size: 14px;
-        background-image: -webkit-linear-gradient(top, rgb(254, 254, 254), rgb(237, 237, 237));
-    }
-    .tab-nav li.active{
-        position: relative;
-        height: 30px;
-        z-index: 1;
-        background : #fff;
-    }
-    .tab-nav li a{
-        display: inline-block;
-        color: #252525;
-    }
-    .tab-nav li.active a{
-        font-weight: bold;
-    }
-    .tab-nav li a:hover{
-        color: #ba2636;
-        font-weight: bold;
-    }
 
-    .tab-con{
-        padding-top: 18px;
-    }
-    .tab-con li{
-        display: none;
-    }
-    .tab-con li.active{
-        display: block;
-    }
-</style>
 <body>
 
-<div id="layOut-tab" class="tab">
-    <ul class="tab-nav clearFix">
+<div id="layOut-tab" class="du_tab">
+    <ul class="du_tabNav clearFix">
         <li class="active"><a href="javascript:;">新闻</a></li>
         <li><a href="javascript:;">电影</a></li>
         <li><a href="javascript:;">图片</a></li>
     </ul>
-    <ul class="tab-con">
+    <ul class="du_tabCon">
         <li class="active"><div>点击事件：新闻的内容</div></li>
         <li><div>点击事件：电影的内容</div></li>
         <li><div>点击事件：图片的内容</div></li>
@@ -86,13 +23,13 @@
 </div>
 
 
-<div id="layOut-tab2" class="tab">
-    <ul class="tab-nav clearFix">
+<div id="layOut-tab2" class="du_tab">
+    <ul class="du_tabNav clearFix">
         <li class="active"><a href="javascript:;">新闻</a></li>
         <li><a href="javascript:;">电影</a></li>
         <li><a href="javascript:;">图片</a></li>
     </ul>
-    <ul class="tab-con">
+    <ul class="du_tabCon">
         <li class="active"><div>滑动事件：新闻的内容</div></li>
         <li><div>滑动事件：电影的内容</div></li>
         <li><div>滑动事件：图片的内容</div></li>
@@ -101,13 +38,13 @@
 
 
 
-<div id="layOut-tab3" class="tab">
-    <ul class="tab-nav clearFix">
+<div id="layOut-tab3" class="du_tab">
+    <ul class="du_tabNav clearFix">
         <li class="active"><a href="javascript:;">新闻</a></li>
         <li><a href="javascript:;">电影</a></li>
         <li><a href="javascript:;">图片</a></li>
     </ul>
-    <ul class="tab-con">
+    <ul class="du_tabCon">
         <li class="active"><div>滑动事件（延迟）：新闻的内容</div></li>
         <li><div>滑动事件（延迟）：电影的内容</div></li>
         <li><div>滑动事件（延迟）：图片的内容</div></li>
@@ -115,13 +52,13 @@
 </div>
 
 
-<div id="layOut-tab4" class="tab">
-    <ul class="tab-nav clearFix">
+<div id="layOut-tab4" class="du_tab">
+    <ul class="du_tabNav clearFix">
         <li class="active"><a href="javascript:;">新闻</a></li>
         <li><a href="javascript:;">电影</a></li>
         <li><a href="javascript:;">图片</a></li>
     </ul>
-    <ul class="tab-con">
+    <ul class="du_tabCon">
         <li class="active"><div>自动播放：新闻的内容</div></li>
         <li><div>自动播放：电影的内容</div></li>
         <li><div>自动播放：图片的内容</div></li>
@@ -130,97 +67,31 @@
 
 
 </body>
-<script src="jquery-1.10.1.min.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/du_TabController.js"></script>
 <script>
-    $(function(){
-        var tab1 = new Tab('layOut-tab');
-        tab1.init({});
 
-        var tab2 = new Tab('layOut-tab2');
-        tab2.init({
-            event:'mouseover'
-        });
+    var tab1 = new Tab('layOut-tab');
+    tab1.init({});
 
-        var tab3 = new Tab('layOut-tab3');
-        tab3.init({
-            event:'mouseover',
-            index:2,
-            delay:300
-        });
+    var tab2 = new Tab('layOut-tab2');
+    tab2.init({
+        event:'mouseover'
+    });
 
-        var tab4 = new Tab('layOut-tab4');
-        tab4.init({
-            event:'mouseover',
-            delay:0
-        });
-        tab4.autoPlay(1000);
+    var tab3 = new Tab('layOut-tab3');
+    tab3.init({
+        event:'mouseover',
+        index:2,
+        delay:300
+    });
 
-    })
-    function Tab(id){
-        this.oParent = $('#'+id);//父级
-        this.aNav = this.oParent.find('.tab-nav li');//tab标签
-        this.aCon = this.oParent.find('.tab-con li');//con标签
-        this.index = 0;
-        this.settings = {//默认参数
-            event : 'click',    //事件类型
-            index : 0,          //初始第几个
-            delay : 0           //时间
-        }
-    }
-    Tab.prototype.init = function(opt){
-        $.extend(this.settings,opt);
-        var This = this;
-        var delayTime = null;
-        //初始化第index个
-        this.index = this.settings.index;
-        this.show(this.aNav.eq(this.index).get(0));
+    var tab4 = new Tab('layOut-tab4');
+    tab4.init({
+        event:'mouseover',
+        delay:0
+    });
+    tab4.autoPlay(1000);
 
-        //绑定事件
-        this.aNav.on(this.settings.event,function(){
-            var _this = this;
-            if(This.settings.event == 'mouseover' && This.settings.delay){
-                //有延迟的mouseover
-                delayTime = setTimeout(function(){
-                    This.show(_this);
-                },This.settings.delay)
-            }else{
-                This.show(_this);
-            }
-
-        });
-        this.aNav.on('mouseout',function(){
-            clearTimeout(delayTime);
-        })
-
-    }
-
-    Tab.prototype.autoPlay = function(t){
-        var This = this;
-        var autoTime = null;
-        autoTime = setInterval(go,t);
-        this.aNav.on('mouseover',function(){
-            clearInterval(autoTime);
-        });
-        this.aNav.on('mouseout',function(){
-            autoTime = setInterval(go,t);
-        });
-        function go(){
-            var i = This.index+1;
-            i = i%(This.aNav.length);
-            //console.log(i);
-            This.show(This.aNav.eq(i).get(0));
-        }
-    }
-
-    Tab.prototype.show = function(obj){
-        //nav
-        this.aNav.removeClass('active');
-        this.aNav.eq($(obj).index()).addClass('active');
-        //con
-        this.aCon.removeClass('active');
-        this.aCon.eq($(obj).index()).addClass('active');
-        //改变当前的index下标
-        this.index = $(obj).index();
-    }
 </script>
 </html>
