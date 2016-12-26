@@ -1,4 +1,4 @@
-# du_Tab
+# du-Tab
 
 - html
 ```html

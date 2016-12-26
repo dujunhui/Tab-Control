@@ -9,6 +9,12 @@
     border-left: 1px solid #CFCFCF;
     border-bottom: 1px solid #CFCFCF;
     background: #F7F7F7;
+    zoom: 1;
+}
+.du-TabNav:after{
+    content: '';
+    display: block;
+    clear: both;
 }
 .du-TabNav li{
     float: left;
