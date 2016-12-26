@@ -27,19 +27,19 @@
 ```
 - show
 ```javascript
-   var tab1 = new duTab('du-TabBox1');
+   var tab1 = new DuTab('du-TabBox1');
    tab1.init({});
 ```
 
 ```javascript
-    var tab2 = new duTab('du-TabBox2');
+    var tab2 = new DuTab('du-TabBox2');
     tab2.init({
         event:'mouseover'
     });
 ```
 
 ```javascript
-    var tab3 = new duTab('du-TabBox3');
+    var tab3 = new DuTab('du-TabBox3');
     tab3.init({
         event:'mouseover',
         index:2,
@@ -48,7 +48,7 @@
 ```
 
 ```javascript
-    var tab4 = new duTab('du-TabBox4');
+    var tab4 = new DuTab('du-TabBox4');
     tab4.init({
         event:'mouseover',
         delay:0

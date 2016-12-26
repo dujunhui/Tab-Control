@@ -1,7 +1,7 @@
 /**
  * du-Tab组件
  */
-function duTab(id){
+function DuTab(id){
     this.oParent = $('#'+id);//父级
     this.aNav = this.oParent.find('.du-TabNav li');//tab标签
     this.aCon = this.oParent.find('.du-TabCon li');//con标签
@@ -12,7 +12,7 @@ function duTab(id){
         delay : 0           //时间
     }
 }
-duTab.prototype.init = function(opt){
+DuTab.prototype.init = function(opt){
     $.extend(this.settings,opt);
     var This = this;
     var delayTime = null;
@@ -36,7 +36,7 @@ duTab.prototype.init = function(opt){
     })
 }
 
-duTab.prototype.autoPlay = function(t){
+DuTab.prototype.autoPlay = function(t){
     var This = this;
     var autoTime = null;
     autoTime = setInterval(go,t);
@@ -54,7 +54,7 @@ duTab.prototype.autoPlay = function(t){
     }
 }
 
-duTab.prototype.show = function(obj){
+DuTab.prototype.show = function(obj){
     //nav
     this.aNav.removeClass('du-TabActive');
     this.aNav.eq($(obj).index()).addClass('du-TabActive');
