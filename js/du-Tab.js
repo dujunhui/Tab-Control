@@ -1,10 +1,10 @@
 /**
- * tab组件
+ * du-Tab组件
  */
-function Tab(id){
+function duTab(id){
     this.oParent = $('#'+id);//父级
-    this.aNav = this.oParent.find('.du_tabNav li');//tab标签
-    this.aCon = this.oParent.find('.du_tabCon li');//con标签
+    this.aNav = this.oParent.find('.du-TabNav li');//tab标签
+    this.aCon = this.oParent.find('.du-TabCon li');//con标签
     this.index = 0;
     this.settings = {//默认参数
         event : 'click',    //事件类型
@@ -12,14 +12,13 @@ function Tab(id){
         delay : 0           //时间
     }
 }
-Tab.prototype.init = function(opt){
+duTab.prototype.init = function(opt){
     $.extend(this.settings,opt);
     var This = this;
     var delayTime = null;
     //初始化第index个
     this.index = this.settings.index;
     this.show(this.aNav.eq(this.index).get(0));
-
     //绑定事件
     this.aNav.on(this.settings.event,function(){
         var _this = this;
@@ -31,15 +30,13 @@ Tab.prototype.init = function(opt){
         }else{
             This.show(_this);
         }
-
     });
     this.aNav.on('mouseout',function(){
         clearTimeout(delayTime);
     })
-
 }
 
-Tab.prototype.autoPlay = function(t){
+duTab.prototype.autoPlay = function(t){
     var This = this;
     var autoTime = null;
     autoTime = setInterval(go,t);
@@ -57,13 +54,13 @@ Tab.prototype.autoPlay = function(t){
     }
 }
 
-Tab.prototype.show = function(obj){
+duTab.prototype.show = function(obj){
     //nav
-    this.aNav.removeClass('du_tabActive');
-    this.aNav.eq($(obj).index()).addClass('du_tabActive');
+    this.aNav.removeClass('du-TabActive');
+    this.aNav.eq($(obj).index()).addClass('du-TabActive');
     //con
-    this.aCon.removeClass('du_tabActive');
-    this.aCon.eq($(obj).index()).addClass('du_tabActive');
+    this.aCon.removeClass('du-TabActive');
+    this.aCon.eq($(obj).index()).addClass('du-TabActive');
     //改变当前的index下标
     this.index = $(obj).index();
 }

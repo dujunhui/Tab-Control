@@ -1,4 +1,4 @@
-# du_TabController
+# du_Tab
 
 - html
 ```html
@@ -22,23 +22,23 @@
 ```
 - js
 ```html
-    <script src="js/du_TabController.js"></script>
+    <script src="js/du-Tab.js"></script>
 ```
 - show
 ```javascript
-    var tab1 = new Tab('layOut-tab');
+    var tab1 = new duTab('layOut-tab');
     tab1.init({});
 ```
 
 ```javascript
-    var tab2 = new Tab('layOut-tab');
+    var tab2 = new duTab('layOut-tab');
     tab2.init({
         event:'mouseover'
     });
 ```
 
 ```javascript
-    var tab3 = new Tab('layOut-tab');
+    var tab3 = new duTab('layOut-tab');
     tab3.init({
         event:'mouseover',
         index:2,
@@ -47,7 +47,7 @@
 ```
 
 ```javascript
-    var tab4 = new Tab('layOut-tab');
+    var tab4 = new duTab('layOut-tab');
     tab4.init({
         event:'mouseover',
         delay:0

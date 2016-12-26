@@ -1,16 +1,16 @@
-.du_tab{
+.du-TabBox{
     width: 310px;
     height: 200px;
     border-top: 2px solid #206F96;
 }
-.du_tabNav{
+.du-TabNav{
     height: 29px;
     line-height: 29px;
     border-left: 1px solid #CFCFCF;
     border-bottom: 1px solid #CFCFCF;
     background: #F7F7F7;
 }
-.du_tabNav li{
+.du-TabNav li{
     float: left;
     width: 102px;
     height: 29px;
@@ -19,30 +19,30 @@
     font-size: 14px;
     background-image: -webkit-linear-gradient(top, rgb(254, 254, 254), rgb(237, 237, 237));
 }
-.du_tabNav li.du_tabActive{
+.du-TabNav li.du-TabActive{
     position: relative;
     height: 30px;
     z-index: 1;
     background : #fff;
 }
-.du_tabNav li a{
+.du-TabNav li a{
     display: inline-block;
     color: #252525;
 }
-.du_tabNav li.du_tabActive a{
+.du-TabNav li.du-TabActive a{
     font-weight: bold;
 }
-.du_tabNav li a:hover{
+.du-TabNav li a:hover{
     color: #ba2636;
     font-weight: bold;
 }
 
-.du_tabCon{
+.du-TabCon{
     padding-top: 18px;
 }
-.du_tabCon li{
+.du-TabCon li{
     display: none;
 }
-.du_tabCon li.du_tabActive{
+.du-TabCon li.du-TabActive{
     display: block;
 }
