@@ -3,7 +3,7 @@
 - html
 ```html
     <div id="du-TabBox1" class="du-TabBox">
-        <ul class="du-TabNav clearFix">
+        <ul class="du-TabNav">
             <li class="du-TabActive"><a href="javascript:;">新闻</a></li>
             <li><a href="javascript:;">电影</a></li>
             <li><a href="javascript:;">图片</a></li>
