@@ -55,3 +55,4 @@
     });
     tab4.autoPlay(1000);
 ```
+[demo.html](https://dujunhui.github.io/du-Tab/demo.html)
